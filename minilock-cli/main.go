@@ -99,9 +99,6 @@ func decryptFile() error {
   if err != nil {
     return err
   }
-  if *OutputFileName != "NOTGIVEN" {
-    filename = *OutputFileName
-  }
   fmt.Println("File received from id '"+sender+"', saving to", filename)
   return ioutil.WriteFile(filename, filecontents, 33204)
   return nil
